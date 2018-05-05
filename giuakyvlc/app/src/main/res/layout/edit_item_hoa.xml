@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_marginTop="15dp">
+
+    <ImageView
+        android:id="@+id/item_edit_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        app:srcCompat="@android:drawable/btn_star" />
+
+
+    <EditText
+        android:id="@+id/Item_edit_name"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/item_edit_image"
+        android:layout_toRightOf="@+id/item_edit_image"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/item_edit_price"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/Item_edit_name"
+        android:layout_alignStart="@+id/Item_edit_name"
+        android:layout_below="@+id/Item_edit_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <EditText
+        android:id="@+id/item_edit_status"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/Item_edit_name"
+        android:layout_toEndOf="@+id/item_edit_price"
+        android:layout_toRightOf="@+id/item_edit_price"
+        android:fontFamily="monospace"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="12sp"
+        android:typeface="monospace" />
+
+    <EditText
+        android:id="@+id/item_edit_detail"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/item_edit_species"
+        android:layout_alignStart="@+id/item_edit_species"
+        android:layout_below="@+id/item_edit_species"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/item_edit_species"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/item_edit_price"
+        android:layout_alignStart="@+id/item_edit_price"
+        android:layout_below="@+id/item_edit_price" />
+
+    <Button
+        android:id="@+id/item_btn_save"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/item_edit_detail"
+        android:layout_alignBottom="@+id/item_edit_detail"
+        android:layout_alignEnd="@+id/item_edit_image"
+        android:layout_alignRight="@+id/item_edit_image"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+
+        android:background="@android:drawable/ic_menu_save"
+        android:onClick="item_save_click" />
+
+
+</RelativeLayout>
